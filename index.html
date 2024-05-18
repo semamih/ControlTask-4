@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bright web </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -11,7 +11,9 @@
 <div class="layout">
     <aside class="sidebar">
         <div class="logo">
-            <img src="images/logo.png" alt="Logo">
+            <a href="#">
+                <img src="images/logo.png" alt="Logo">
+            </a>
         </div>
         <nav class="navigations">
                 <ul>
@@ -83,22 +85,23 @@
             </nav>
         <div class="feedback">
             <img src="images/phone.png" alt="Phone">
-            <div class="feedback-text">
-                <p>To get user feedback, some developers make new apps or </p>
-                <p>features available before their official release.
-                    You can try these apps or features when you join early access or beta programs. <a href="#">Check
-                        out here</a>
-                </p>
-            </div>
+            <p>To get user feedback, some developers make new apps or features available before their official release. You can try these apps or features when you join early access or beta programs.
+                <a>Check out here</a></p>
         </div>
     </aside>
     <div class="content">
         <header class="header">
             <div class="header-menu">
-                <img src="images/menu.png" alt="Menu icon">
-                <div class="header-menu-team">My Team</div>
+                <button class="burger">
+                    <svg width="38" height="22" viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="38" height="2" rx="1" fill="#4F4E4F"/>
+                        <rect y="10" width="38" height="2" rx="1" fill="#4F4E4F"/>
+                        <rect y="20" width="26" height="2" rx="1" fill="#4F4E4F"/>
+                    </svg>
+                </button>
+                <div class="header-menu-team"><a href="#">My Team</a></div>
                 <div class="header-menu-tasks">
-                    <div class="header-menu-tasks-text">Tasks</div>
+                    <div class="header-menu-tasks-text"><a href="#">Tasks</a></div>
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_2_86)">
                             <path d="M11.8534 2.89662C11.6579 2.70113 11.3419 2.70113 11.1464 2.89662L5.99998 8.04301L0.853593 2.89662C0.658105 2.70113 0.342104 2.70113 0.146616 2.89662C-0.048872 3.0921 -0.048872 3.40811 0.146616 3.60359L5.64651 9.10348C5.744 9.20098 5.87199 9.24999 6.00001 9.24999C6.12802 9.24999 6.25601 9.20098 6.35351 9.10348L11.8534 3.60359C12.0489 3.40811 12.0489 3.0921 11.8534 2.89662Z" fill="#858796"/>
@@ -109,10 +112,12 @@
                             </clipPath>
                         </defs>
                     </svg>
-                   <div class="header-menu-tasks-popup">
-                        <div class="header-menu-tasks-popup-item">Tasks Today</div>
-                       <div class="header-menu-tasks-popup-item">Tasks Yesterday</div>
-                   </div>
+                    <div class="header-menu-tasks-popup-container">
+                        <div class="header-menu-tasks-popup">
+                            <div class="header-menu-tasks-popup-item">Tasks Today</div>
+                            <div class="header-menu-tasks-popup-item">Tasks Yesterday</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="header-search">
@@ -129,35 +134,37 @@
                     </svg>
                     <input type="text" class="header-search-input" placeholder=" Search...">
                 </label>
-                <svg class="diagram-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_2_69)">
-                        <path d="M2.96875 9.375C3.44147 9.375 3.86932 9.18533 4.18549 8.88077L5.91995 9.74792C5.91125 9.81857 5.89844 9.888 5.89844 9.96094C5.89844 10.9302 6.68701 11.7188 7.65625 11.7188C8.62549 11.7188 9.41406 10.9302 9.41406 9.96094C9.41406 9.6904 9.34753 9.4371 9.23782 9.20792L11.5907 6.85501C11.8199 6.96472 12.0732 7.03125 12.3438 7.03125C13.313 7.03125 14.1016 6.24268 14.1016 5.27344C14.1016 5.09094 14.0657 4.91837 14.0138 4.75281L16.0582 3.21991C16.3371 3.40622 16.6714 3.51562 17.0312 3.51562C18.0005 3.51562 18.7891 2.72705 18.7891 1.75781C18.7891 0.788574 18.0005 0 17.0312 0C16.062 0 15.2734 0.788574 15.2734 1.75781C15.2734 1.94031 15.3093 2.11288 15.3612 2.27844L13.3168 3.81134C13.0379 3.62503 12.7036 3.51562 12.3438 3.51562C11.3745 3.51562 10.5859 4.3042 10.5859 5.27344C10.5859 5.54398 10.6525 5.79727 10.7622 6.02646L8.40927 8.37936C8.18008 8.26965 7.92679 8.20312 7.65625 8.20312C7.18353 8.20312 6.75568 8.39279 6.43951 8.69736L4.70505 7.8302C4.71375 7.75955 4.72656 7.69012 4.72656 7.61719C4.72656 6.64795 3.93799 5.85938 2.96875 5.85938C1.99951 5.85938 1.21094 6.64795 1.21094 7.61719C1.21094 8.58643 1.99951 9.375 2.96875 9.375Z" fill="#858796"/>
-                        <path d="M19.4141 18.8281H18.7891V6.44531C18.7891 6.12152 18.5269 5.85938 18.2031 5.85938H15.8594C15.5356 5.85938 15.2734 6.12152 15.2734 6.44531V18.8281H14.1016V9.96094C14.1016 9.63715 13.8394 9.375 13.5156 9.375H11.1719C10.8481 9.375 10.5859 9.63715 10.5859 9.96094V18.8281H9.41406V14.6484C9.41406 14.3246 9.15192 14.0625 8.82812 14.0625H6.48438C6.16058 14.0625 5.89844 14.3246 5.89844 14.6484V18.8281H4.72656V12.3047C4.72656 11.9809 4.46442 11.7188 4.14062 11.7188H1.79688C1.47308 11.7188 1.21094 11.9809 1.21094 12.3047V18.8281H0.585938C0.262146 18.8281 0 19.0903 0 19.4141C0 19.7379 0.262146 20 0.585938 20H19.4141C19.7379 20 20 19.7379 20 19.4141C20 19.0903 19.7379 18.8281 19.4141 18.8281Z" fill="#858796"/>
-                    </g>
-                    <defs>
-                        <clipPath id="clip0_2_69">
-                            <rect width="20" height="20" fill="white"/>
-                        </clipPath>
-                    </defs>
-                </svg>
+                <button class="diagram">
+                    <svg class="diagram-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2_69)">
+                            <path d="M2.96875 9.375C3.44147 9.375 3.86932 9.18533 4.18549 8.88077L5.91995 9.74792C5.91125 9.81857 5.89844 9.888 5.89844 9.96094C5.89844 10.9302 6.68701 11.7188 7.65625 11.7188C8.62549 11.7188 9.41406 10.9302 9.41406 9.96094C9.41406 9.6904 9.34753 9.4371 9.23782 9.20792L11.5907 6.85501C11.8199 6.96472 12.0732 7.03125 12.3438 7.03125C13.313 7.03125 14.1016 6.24268 14.1016 5.27344C14.1016 5.09094 14.0657 4.91837 14.0138 4.75281L16.0582 3.21991C16.3371 3.40622 16.6714 3.51562 17.0312 3.51562C18.0005 3.51562 18.7891 2.72705 18.7891 1.75781C18.7891 0.788574 18.0005 0 17.0312 0C16.062 0 15.2734 0.788574 15.2734 1.75781C15.2734 1.94031 15.3093 2.11288 15.3612 2.27844L13.3168 3.81134C13.0379 3.62503 12.7036 3.51562 12.3438 3.51562C11.3745 3.51562 10.5859 4.3042 10.5859 5.27344C10.5859 5.54398 10.6525 5.79727 10.7622 6.02646L8.40927 8.37936C8.18008 8.26965 7.92679 8.20312 7.65625 8.20312C7.18353 8.20312 6.75568 8.39279 6.43951 8.69736L4.70505 7.8302C4.71375 7.75955 4.72656 7.69012 4.72656 7.61719C4.72656 6.64795 3.93799 5.85938 2.96875 5.85938C1.99951 5.85938 1.21094 6.64795 1.21094 7.61719C1.21094 8.58643 1.99951 9.375 2.96875 9.375Z" fill="#858796"/>
+                            <path d="M19.4141 18.8281H18.7891V6.44531C18.7891 6.12152 18.5269 5.85938 18.2031 5.85938H15.8594C15.5356 5.85938 15.2734 6.12152 15.2734 6.44531V18.8281H14.1016V9.96094C14.1016 9.63715 13.8394 9.375 13.5156 9.375H11.1719C10.8481 9.375 10.5859 9.63715 10.5859 9.96094V18.8281H9.41406V14.6484C9.41406 14.3246 9.15192 14.0625 8.82812 14.0625H6.48438C6.16058 14.0625 5.89844 14.3246 5.89844 14.6484V18.8281H4.72656V12.3047C4.72656 11.9809 4.46442 11.7188 4.14062 11.7188H1.79688C1.47308 11.7188 1.21094 11.9809 1.21094 12.3047V18.8281H0.585938C0.262146 18.8281 0 19.0903 0 19.4141C0 19.7379 0.262146 20 0.585938 20H19.4141C19.7379 20 20 19.7379 20 19.4141C20 19.0903 19.7379 18.8281 19.4141 18.8281Z" fill="#858796"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2_69">
+                                <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
                 <button class="header-search-button">Upload</button>
             </div>
         </header>
         <div class="container">
             <div class="pre-container-content">
-                <p>Dashboard</p>
+                <h1>Dashboard</h1>
             </div>
             <div class="container-content">
                 <div class="container-content-item">
                     <div class="item-image">
                         <img src="images/img1.png" alt="Video image">
                         <div class="item-image-adding moderation">
-                            On moderation
+                            <p>On moderation</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #1. Design Interior by Lusia Lesitskaya</div>
-                        <div class="item-subtitle">33 minutes ago</div>
+                        <div class="item-title"><p>Video #1. Design Interior by Lusia Lesitskaya</p></div>
+                        <div class="item-subtitle"><p>33 minutes ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -225,12 +232,12 @@
                     <div class="item-image">
                         <img src="images/img2.png" alt="Video image">
                         <div class="item-image-adding published">
-                            Published
+                            <p>Published</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #2. Design Interior by Krona Suvaltsa</div>
-                        <div class="item-subtitle">30 minutes ago</div>
+                        <div class="item-title"><p>Video #2. Design Interior by Krona Suvaltsa</p></div>
+                        <div class="item-subtitle"><p>30 minutes ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -298,12 +305,12 @@
                     <div class="item-image">
                         <img src="images/img3.png" alt="Video image">
                         <div class="item-image-adding error">
-                            Error uploading
+                            <p>Error uploading</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #3. Design Interior by Steve Kosner</div>
-                        <div class="item-subtitle">1 hour ago</div>
+                        <div class="item-title"><p>Video #3. Design Interior by Steve Kosner</p></div>
+                        <div class="item-subtitle"><p>1 hour ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -371,12 +378,12 @@
                     <div class="item-image">
                         <img src="images/img4.png" alt="Video image">
                         <div class="item-image-adding published">
-                            Published
+                            <p>Published</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #4. Design Interior by Kross Kostinsky</div>
-                        <div class="item-subtitle">1 minute ago</div>
+                        <div class="item-title"><p>Video #4. Design Interior by Kross Kostinsky</p></div>
+                        <div class="item-subtitle"><p>1 minute ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,12 +451,12 @@
                     <div class="item-image">
                         <img src="images/img5.png" alt="Video image">
                         <div class="item-image-adding published">
-                            Published
+                            <p>Published</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #5. Design Interior by Bob Markon</div>
-                        <div class="item-subtitle">26 minute ago</div>
+                        <div class="item-title"><p>Video #5. Design Interior by Bob Markon</p></div>
+                        <div class="item-subtitle"><p>26 minute ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -517,12 +524,12 @@
                     <div class="item-image">
                         <img src="images/img6.png" alt="Video image">
                         <div class="item-image-adding moderation">
-                            On moderation
+                            <p>On moderation</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #6. Design Interior by Rork Stenseyn</div>
-                        <div class="item-subtitle">56 minute ago</div>
+                        <div class="item-title"><p>Video #6. Design Interior by Rork Stenseyn</p></div>
+                        <div class="item-subtitle"><p>56 minute ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -590,12 +597,12 @@
                     <div class="item-image">
                         <img src="images/img7.png" alt="Video image">
                         <div class="item-image-adding published">
-                            Published
+                            <p>Published</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #8. Design Interior by Krenso La Cruddicinio</div>
-                        <div class="item-subtitle">54 minute ago</div>
+                        <div class="item-title"><p>Video #8. Design Interior by Krenso La Cruddicinio</p></div>
+                        <div class="item-subtitle"><p>54 minute ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -663,12 +670,12 @@
                     <div class="item-image">
                         <img src="images/img8.png" alt="Video image">
                         <div class="item-image-adding published">
-                            Published
+                            <p>Published</p>
                         </div>
                     </div>
                     <div class="item-info">
-                        <div class="item-title">Video #9. Design Interior by Kate Gyon</div>
-                        <div class="item-subtitle">4 hours ago</div>
+                        <div class="item-title"><p>Video #9. Design Interior by Kate Gyon</p></div>
+                        <div class="item-subtitle"><p>4 hours ago</p></div>
                         <div class="item-actions">
                             <a href="#" class="item-actions-action">
                                 <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">

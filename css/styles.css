@@ -92,18 +92,12 @@ body {
     float: left;
     margin-right: 6px;
 }
-.feedback-text {
+.feedback p {
     font-size: 14px;
     line-height: 19px;
     color: #4F4E4F;
 }
-.feedback-text:last-child {
-    width: 192px;
-}
-.feedback-text:first-child {
-    width: 136px;
-}
-.feedback-text a {
+.feedback p a {
     font-size: 14px;
     line-height: 19px;
     text-decoration: none;
@@ -140,8 +134,13 @@ body {
     align-items: center;
 }
 .header-menu-team {
+    margin-left: 60px;
     margin-right: 40px;
     cursor: pointer;
+}
+.header-menu a {
+    text-decoration: none;
+    color: #858796;
 }
 .header-menu-team:hover {
     color: #3D63D2;
@@ -164,6 +163,12 @@ body {
 }
 .header-menu-tasks:hover svg path {
     fill: #3D63D2;
+}
+.diagram,
+.burger{
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 .header-search-button {
     width: 83px;
@@ -209,7 +214,9 @@ body {
     left: 20px;
     top: 12px;
 }
-
+.header-menu-tasks-popup-container {
+    padding: 18px;
+}
 .header-menu-tasks-popup {
     display: none;
     position: absolute;
@@ -220,6 +227,9 @@ body {
     box-sizing: border-box;
     left: 0;
     top: 35px;
+}
+.header-menu-tasks-popup:hover {
+    display: block;
 }
 .header-menu-tasks-popup-item {
     font-size: 14px;
@@ -311,7 +321,7 @@ body {
 .pre-container-content {
     padding: 25px 40px 30px 40px;
 }
-.pre-container-content p {
+.pre-container-content h1 {
     font-family: NunitoExtraBold,sans-serif;
     font-size: 35px;
     color: #4F4E4F;
