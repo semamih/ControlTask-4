@@ -142,7 +142,7 @@ body {
     text-decoration: none;
     color: #858796;
 }
-.header-menu-team:hover {
+.header-menu a:hover {
     color: #3D63D2;
 }
 .header-menu-tasks {
@@ -152,7 +152,7 @@ body {
     cursor: pointer;
     position: relative;
 }
-.header-menu-tasks:hover {
+.header-menu a:hover {
     color: #3D63D2;
 }
 .header-menu-tasks:hover .header-menu-tasks-popup{
